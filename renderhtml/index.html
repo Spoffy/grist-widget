@@ -28,6 +28,7 @@
       var params = new URLSearchParams(window.location.search)
       var ADD_TAGS = params.get('tags')?.split(",");
       var ADD_ATTR = params.get('attr')?.split(",");
+      var FORCE_BODY = Boolean(params.get('force_body'));
       function render(elemId, content) {
         var el = document.getElementById(elemId);
         if (!content) {
